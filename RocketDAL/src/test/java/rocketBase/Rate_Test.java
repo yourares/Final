@@ -18,5 +18,8 @@ public class Rate_Test {
 	//		Check to see if a RateException is thrown if there are no rates for a given
 	//		credit score
 
-
+@Test
+public void RateTest(){
+	
+}
 }
