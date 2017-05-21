@@ -57,7 +57,7 @@ public class MortgageController {
 	
 	public void HandleLoanRequestDetails(LoanRequest lRequest)
 	{
-		double Payment = lRequest.getdPayment()*0.28; 
+		double Payment = lRequest.getdIncome()*0.28; 
 		double Amount = (lRequest.getdIncome() - lRequest.getdExpenses())*0.36;
 		if(Payment>Amount){
 			String newPayment = new DecimalFormat("%.2f").format(Payment);
