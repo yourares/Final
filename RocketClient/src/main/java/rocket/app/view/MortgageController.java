@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import rocket.app.MainApp;
 import rocketCode.Action;
@@ -13,8 +15,19 @@ import rocketData.LoanRequest;
 
 public class MortgageController {
 
+	@FXML TextField txtIncome;
+	@FXML TextField txtExpenses;
 	@FXML TextField txtCreditScore;
+	@FXML TextField txtHouseCost;
 	@FXML TextField txtMortgageAmt;
+	@FXML ComboBox<Integer> cmbTerm;
+	@FXML Label lblIncome;
+	@FXML Label lblExpenses;
+	@FXML Label lblCreditScore;
+	@FXML Label lblHouseCost;
+	@FXML Label lblTerm;
+	@FXML Label lblMortgageAmt;
+	
 	
 	private TextField txtNew;
 	
@@ -47,6 +60,8 @@ public class MortgageController {
 		//			after it's returned back from the server, the payment (dPayment)
 		//			should be calculated.
 		//			Display dPayment on the form, rounded to two decimal places
+
 		
 	}
-}
+  }
+
