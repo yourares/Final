@@ -1,5 +1,7 @@
 package rocket.app.view;
 
+import java.text.DecimalFormat;
+
 import eNums.eAction;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -55,12 +57,15 @@ public class MortgageController {
 	
 	public void HandleLoanRequestDetails(LoanRequest lRequest)
 	{
-		//	TODO - RocketClient.HandleLoanRequestDetails
-		//			lRequest is an instance of LoanRequest.
-		//			after it's returned back from the server, the payment (dPayment)
-		//			should be calculated.
-		//			Display dPayment on the form, rounded to two decimal places
-
+		double Payment = lRequest.getdPayment(); 
+		double Amount = lRequest.getdIncome() - lRequest.getdExpenses();
+		if(Payment>Amount){
+			String newPayment = new DecimalFormat("%.2f").format(Payment);
+			txtMortgageAmt.setText("The MortgageAmt will Be: $ ");
+		}
+		else{
+			txtMortgageAmt.setText("House Cost too High");
+		}
 		
 	}
   }
